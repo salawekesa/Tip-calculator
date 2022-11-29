@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root{
+--primary--Strong-cyan: hsl(172, 67%, 45%);
+--Very-dark-cyan: hsl(183, 100%, 15%);
+--Dark-grayish-cyan: hsl(186, 14%, 43%);
+--Grayish-cyan: hsl(184, 14%, 56%);
+--Light-grayish-cyan: hsl(185, 41%, 84%);
+--Very-light-grayish-cyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+}
+
+*,::before,::after{
+    box-sizing: border-box;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+
+}
+
+body{
+    font-size: 24px; /*form inputs*/
+    font-family: 'Space Mono';
+    font-weight: 700;
+    background-color: var(--Light-grayish-cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.logo{
+    margin: 1rem;
+}
+
+.card{
+    background-color: var(--White);
+    width: 375px;
+    height: auto ;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 30px 30px 0 0;
+}
+
+input{
+    background-color: var(--Very-light-grayish-cyan) ;
+    width: 100%;
+    height: 35px;
+    border: none;
+}
+
+#bill-input{
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 10px;
+    text-align: right;
+}
+
+#people-input{
+    background-image: url(images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position:10px;
+    text-align: right;
+}
+
+#bill-input:focus{
+    border:none
+}
+
+.tips-btn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+}
+.bill, .tips-cont, .people{
+    font-size: 18px;
+}
+
+.tips{
+    height: 2.5rem;
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    border: none;
+    border-radius: 5px;
+}
+
+.tips:focus{
+    background-color: var(--primary--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+#custom{
+    text-align: right;
+    font-size: 20px;
+    height: 2.5rem;
+    border-radius: 5px;
+}
+
+.bill{
+    margin-bottom: 1rem;
+}
+
+.people{
+    margin-bottom: 1rem;
+}
+
+.tips-cont{
+    margin-bottom: 1rem;
+}
+
+.section-2{
+    background-color: var(--Very-dark-cyan);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2.5rem;
+    border-radius: 10px;
+}
+
+.Amount{
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.Total{
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.cash-total, .cash-tip{
+    color: var(--primary--Strong-cyan);
+}
+.amount-sub, .total-sub{
+    color: var(--Dark-grayish-cyan);
+    font-size: 16px;
+}
+.total-p, .amount-p{
+    color: var(--Very-light-grayish-cyan);
+}
+
+.reset>button{
+    width: 100%;
+    height: 2.5rem;
+    font-size: 18px;
+    background-color: var(--Dark-grayish-cyan);
+    border: none;
+    color: var(--Very-dark-cyan);
+}
+.reset>button:focus{
+    background-color: var(--Light-grayish-cyan);
+}
+
+@media only screen and (min-width:720px){
+    .card{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-width: 800px;
+        min-height: 400px;
+    }
+
+    .tips-btn{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        width: 100%;
+    
+    }
+    .section-1{
+        margin-right: 1rem;
+        width: 55%;
+    }
+    .section-2{
+        width: 45%;
+        position: relative;
+        display: block;
+        
+    }
+    #bill-input, #people-input, .tips{
+        height: 3rem;
+        font-size: 20px;
+    }
+    .reset{
+        position: absolute;
+        bottom: 5%;
+        width: 80%;
+    }
+}
